@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+	<title>알바비 구하기</title>
+	<style>
+	    input{font-size: 1em;}
+	    button{font-size:1em;}
+	    body{font-size: 2em;}
+</style>
+
+</head>
+
+<body>
+	<h1 id="display"> 당신의 이번달 알바비를 알아보세요~</h1>
+	 <input type="text" id="money" placeholder="당신의 시급을 알려주세요.">원
+    <input type="text" id="time" placeholder="한달동안 알바 한 시간을 알려주세요.">시간
+   <br><button id="action">계산하기</button>
+
+	<script>
+	  action.onclick = function(){
+	  	console.log("OK");
+	  	var mymoney = money.value;
+	  	var mytime = time.value;
+	  	standardMoney(mymoney,mytime);
+	  }
+	 
+  function standardMoney(money,time){
+          var standardMoney = money*time;
+          
+         var Text = "당신의 이번달 알바비는 " + standardMoney + "원 입니다";
+          display.innerHTML = Text;
+      }
+	</script>
+</body>
